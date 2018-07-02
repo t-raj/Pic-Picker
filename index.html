@@ -1,0 +1,168 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>Home</title> 
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <link rel="stylesheet" href="sunset.css">
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head> 
+<body> 
+
+  <!-- begin home view -->
+  <div data-role="page" id="home" data-theme="b">    
+    <div data-role="header"> 
+      <h1>jQuery Mobile HW</h1> 
+    </div> 
+    <div data-role="content">      
+      <ul data-role="listview" data-inset="true" data-dividertheme="b"> 
+        <li data-role="list-divider" style="text-align:center;">Team Members</li> 
+        <li style="text-align:center;">Sameer Rizvi</li> 
+        <li style="text-align:center;">Julius Almeida</li> 
+        <li style="text-align:center;">Cole M. Johnson</li> 
+        <li style="text-align:center;">Tara Raj</li> 
+        <li style="text-align:center;">Maxwell Palmer</li> 
+      </ul>           
+    </div>   
+    <div data-role="content">
+      <p style="text-align:center;">Sign-up using our robust form to gain access to our photo sharing website.</p>
+    </div>
+    <div data-role="footer" data-theme="a">
+      <div data-role="navbar">
+        <ul>
+          <li>
+           <a href="#home" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline" 
+           data-icon="home">Home</a>
+         </li>
+         <li>
+           <a href="#form" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline" 
+           data-icon="plus">Form</a>
+         </li>
+         <li>
+           <a href="#content" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline" 
+           data-icon="grid">Content</a>
+         </li>
+       </ul>
+     </div>
+   </div> 
+ </div> 
+ <!-- end home view -->
+
+ <!-- begin form view -->
+ <div data-role="page" id="form" data-theme="b">
+  <div data-role="header">
+    <h1>Form</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+    <form action="./upload.php" method="post" enctype="multipart/form-data">
+      <label for="username">Enter Username:</label>
+      <input type="text" name="username" id="username"> 
+      <label for="search">Search and select your favorite photography style:</label>
+      <input type="search" name="search" id="search" placeholder="Search for content..">
+      <label for="switch">Are you a human?</label>
+      <input type="checkbox" data-role="flipswitch" name="switch" id="switch">
+      <fieldset data-role="controlgroup">
+        <legend>What cameras do you use?</legend>
+        <label for="dslr">DSLR</label>
+        <input type="checkbox" name="camera" id="dslr" value="dslr">
+        <label for="film">Film</label>
+        <input type="checkbox" name="camera" id="film" value="film">
+        <label for="other">Other</label>
+        <input type="checkbox" name="camera" id="other" value="other">  
+      </fieldset>
+      <label for="points">Please rate your life value between 0 and 100:</label>
+      <input type="range" name="points" id="points" value="50" min="0" max="100">
+      <p>Please enter the date on which you began photography: <input type="date"></p>
+      <p>Upload your first photo: <input type="file" name="fileToUpload" id="fileToUpload"></p>
+      <input type="submit" value="Upload Image" name="submit">
+      <input type="submit" data-inline="true" value="Submit">
+    </form>  
+
+    <div data-role="footer">
+      <div data-role="navbar">
+        <ul>
+          <li>
+            <a href="#home" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline" 
+            data-icon="home">Home</a>
+          </li>
+          <li>
+            <a href="#form" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline" 
+            data-icon="plus">Form</a>
+          </li>
+          <li>
+            <a href="#content" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline" 
+            data-icon="grid">Content</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- end form view -->
+
+  <!-- begin content view -->
+  <div data-role="page" id="content" data-theme="a"> 
+    <div data-role="header"> 
+      <h1>Pic Picker</h1> 
+    </div> 
+    <div data-role="header"> 
+      <h2>A gallery of fun, artsy pics</h2> 
+    </div> 
+    <div data-role="content">
+      <p>Spice up your life with some cool pics. Whether you're into picturesque landscapes, foreign cultures, cute patterns, or anime, we have something for you. Our pics are perfect for backgrounds, screen savers, wall art, collages, or just about any project you can think of. Find what you're looking for easily with our interactive pic picker form, which helps you find pictures based on content, color, or when they were uploaded.</p>
+    </div>
+
+    <div data-role="collapsible"> 
+      <h3>Categories</h3>    
+      <ul data-role="listview" data-inset="true" data-dividertheme="b"> 
+        <li>
+          <div data-role="collapsible"> 
+            <h4>Landscapes</h4>    
+            <p><img src="http://www.wallpaperinfinite.com/upload/wallpaper_images/beach%20landscape%20wallpaper11849.jpg" /></p>
+            <p><img src="http://images.forwallpaper.com/files/images/0/09b6/09b6ae17/229417/landscapes-beach-coast-landscape-palm-trees-afternoon-sunset-sea-clouds.jpg" /></p>
+          </div>
+        </li> 
+        <li>
+          <div data-role="collapsible"> 
+            <h4>Animated</h4>    
+            <p><img src="http://img2.wikia.nocookie.net/__cb20110327184354/jamescameronsavatar/images/4/41/The_glow_of_the_night.jpg" /></p>
+            <p><img src="http://th08.deviantart.net/fs71/PRE/f/2013/166/e/d/pandora_flora_by_priteeboy-d693lwa.jpg"></p>
+          </div>
+        </li> 
+        <li>
+          <div data-role="collapsible"> 
+            <h4>Patterns</h4>    
+            <p><img src="http://highwycombecc.co.uk/wp-content/uploads/2013/10/Pattern-Blue-Dots-background-patterns-pattern-wallpapers-1920x1080.jpg"/>
+            </p>
+            <p><img src="http://3.bp.blogspot.com/-Wth9o5wVrN0/Th9VOdIzuJI/AAAAAAAALLw/fVTsQJgPyfM/s640/Best-top-desktop-abstract-pattern-wallpapers-hd-wallpaper-pattern-pictures-and-images-38.jpg" /></p>
+          </div>
+        </li> 
+      </ul>        
+    </div>
+     <div data-role="footer" data-theme="a">
+      <div data-role="navbar">
+        <ul>
+          <li>
+           <a href="#home" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline" 
+           data-icon="home">Home</a>
+         </li>
+         <li>
+           <a href="#form" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline" 
+           data-icon="plus">Form</a>
+         </li>
+         <li>
+           <a href="#content" data-transition="slide" class="ui-btn ui-corner-all ui-btn-inline" 
+           data-icon="grid">Content</a>
+         </li>
+       </ul>
+     </div>
+   </div> 
+  </div>
+  <!-- end content view -->
+
+</body> 
+</html>

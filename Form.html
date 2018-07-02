@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css">
+ <script>
+$(function() {
+$( "#datepicker" ).datepicker();
+});
+</script>
+</head>
+<body>
+<div data-role="page" data-theme="b">
+  <div data-role="header">
+  <h1>Form</h1>
+  </div>
+
+  <div data-role="main" class="ui-content">
+   
+    <form method="post" >
+<label for="fullname">Enter Text:</label>
+        <input type="text" name="fullname" id="fullname"> 
+		<label for="search">Looking for anything?</label>
+    <input type="search" name="search" id="search" placeholder="Search for content..">
+ <label for="switch">Toggle Switch:</label>
+        <input type="checkbox" data-role="flipswitch" name="switch" id="switch">
+      <fieldset data-role="controlgroup">
+        <legend>Choose as many favorite colors as you'd like:</legend>
+          <label for="red">Red</label>
+          <input type="checkbox" name="favcolor" id="red" value="red">
+          <label for="green">Green</label>
+          <input type="checkbox" name="favcolor" id="green" value="green">
+          <label for="blue">Blue</label>
+          <input type="checkbox" name="favcolor" id="blue" value="blue">	
+      </fieldset>
+	<label for="points">Slider:</label>
+       <input type="range" name="points" id="points" value="50" min="0" max="100">
+<p>Date: <input id="datepicker" type="text" /></p>
+<input type="submit" data-inline="true" value="Submit">
+    </form>  
+  </div>
+<div data-role="footer">
+   <div data-role="navbar">
+      <ul>
+        <li><a href="Home.html" data-icon="home">Home</a></li>
+        <li><a href="Form.html" data-icon="plus">Form</a></li>
+		<li><a href="Content.html" data-icon="grid">Content</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
